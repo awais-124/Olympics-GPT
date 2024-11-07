@@ -2,6 +2,9 @@
 
 ### A Rule-based chatbot that can handle queries related to Olympics dataset.
 
+---
+
+
 > Get started
 - clone the repo `git clone https://github.com/awais-124/Olympics-GPT.git`
 - you need python editor for this
