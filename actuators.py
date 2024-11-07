@@ -35,7 +35,7 @@ def show_athlete_participations(athlete_name):
 
 def show_athletes_by_sport(sport, year=None):
     athletes_by_sport=find_athletes_by_sport(sport, year)
-    if type(athletes_by_sport) == bool
+    if type(athletes_by_sport) == bool:
         return "_"*50
     counter=1
     output=""
