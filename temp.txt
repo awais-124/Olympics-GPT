@@ -1,0 +1,44 @@
+"""
+def get_athlete_medals(athlete_name):
+all_medals = (interpret_question("Give medals won by Jean Borotra"))
+    print(f"Following medals are won by {all_medals["name"]}: ")
+    for index, medal in all_medals["medals"].iterrows():
+        print(f"{medal['medal'] if medal["medal"] != "No Medal" else "Silver"} medal in {medal['discipline']} in the year {int(medal['year'])} at {medal["event"]}.")
+
+def get_country_performance(noc, year=None):
+medals_count=interpret_question("How many medals won by France?")
+print(f"Silver medals = {medals_count.get('Silver',0)}\nGold medals = {medals_count.get('Gold',0)}\nBronze medals = {medals_count.get("Bronze",0)}")
+
+def get_athlete_participations(athlete_name):
+part_of=interpret_question("Jean Borotra participated in which sports?")
+    for _, row in part_of["part_of"].iterrows():
+        sentence = f"In {int(row['year'])}, {part_of["name"]} competed in the {row['discipline']} {row['event']} event, finishing in {int(row['place'])}th place and winning a {row['medal']} medal."
+        print(sentence)
+
+def find_athletes_by_sport(sport, year=None):
+athletes_by_sport=(interpret_question("Which athletes competed in Tennis in 1920?")) 
+counter=1
+for index, athletes in athletes_by_sport.iterrows():
+    print(f"{counter}: Athlete id={index} -> {athletes["name"]}  participated from {athletes["NOC"]}.")
+    counter+=1
+
+def get_medalists_by_year(year, discipline=None): 
+medalists = interpret_question("Who won medals in tennis in 1924?")
+print(medalists.columns,type(medalists))
+for index, medalist in medalists.iterrows():
+    print(f"{index}. {medalist['name']} from {medalist['NOC']} won a {medalist['medal']} medal in {medalist['event']} ({medalist['discipline']}).")
+
+def get_athlete_bio(athlete_name):
+athlete=interpret_question("Show bio data of Jean Borotra.")
+    print(f"Athlete ID: {athlete['athlete_id']}")
+    print(f"Name: {athlete['name']}")
+    print(f"Date of Birth: {athlete['born_date']} (Born in {athlete['born_city']}, {athlete['born_region']}, {athlete['born_country']})")
+    print(f"Height: {athlete['height_cm']} cm")
+    print(f"Weight: {athlete['weight_kg']} kg")
+    print(f"Date of Death: {athlete['died_date']}")
+
+    
+def get_athlete_stats(discipline):
+avg_data = interpret_question("Tell me average stats of all players in Golf?")
+print(f"{avg_data["count"]} players participated in golf with average height = {avg_data["avg_height"]} and average weight = {avg_data["avg_weight"]}")
+"""
